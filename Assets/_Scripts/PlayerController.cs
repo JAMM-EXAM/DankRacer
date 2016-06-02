@@ -34,8 +34,7 @@ public class PlayerController : MonoBehaviour
 	public float boostConsumption;
 	public float maxBoostFuel;
 
-	//Animation
-	public Animator playerAnim;
+	
 
 	void Start ()
 	{
@@ -68,7 +67,7 @@ public class PlayerController : MonoBehaviour
 		//break decreases the player's speed over time 
 		else if (Input.GetAxis ("Break") > 0)
 		{
-			playerAnim.SetFloat ("TiltY", (Input.GetAxis ("Vertical") * -1));
+			
 			speed -= brakeAceleration;
 			if (speed <= 0)
 			{

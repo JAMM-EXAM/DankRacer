@@ -108,8 +108,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 108590}
-  m_LocalRotation: {x: 0.20272836, y: 0, z: 0, w: 0.97923505}
-  m_LocalPosition: {x: 0, y: 4.93, z: -2.78}
+  m_LocalRotation: {x: 0.020778589, y: 0.00000004088622, z: 0.000000021719888, w: 0.9997842}
+  m_LocalPosition: {x: -0, y: 4.07, z: -4.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 495404}
@@ -121,7 +121,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 137708}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: 465.99, y: 3.56, z: 193.79}
+  m_LocalPosition: {x: 458, y: 3.56, z: 186.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 493376}
@@ -147,7 +147,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 67
+  field of view: 60
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -308,6 +308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6fb99367ac03034f88b28f9dacf58ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayer: 1
   meshes:
   - {fileID: 4300000, guid: cae049ab72ea53d4396ae8924189eedc, type: 3}
   - {fileID: 4300000, guid: 04cce7d2a52d54844a5999160233d880, type: 3}
@@ -338,7 +339,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   playerModel: {fileID: 0}
-  handeling: 60
+  handeling: 80
   boostmaxSpeed: 150
   normalMaxSpeed: 100
   speed: 0
@@ -349,7 +350,6 @@ MonoBehaviour:
   boostFuel: 50
   boostConsumption: 1.5
   maxBoostFuel: 100
-  playerAnim: {fileID: 0}
 --- !u!114 &11430508
 MonoBehaviour:
   m_ObjectHideFlags: 1
