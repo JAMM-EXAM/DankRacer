@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 97fa269a9d58b214d92c7df606aa7ae1
+timeCreated: 1464787439
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - MelonMan: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
