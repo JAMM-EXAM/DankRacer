@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
 	Rigidbody playerRigid;
 
 	public LayerMask collisionMask;
 	public GameObject playerModel;
-
+    public Text fuelCounter;
 	//turning varaibles
 	public float handeling = 10;
 	Vector3 rotation;
@@ -34,6 +34,9 @@ public class PlayerController : MonoBehaviour
 	public float boostConsumption;
 	public float maxBoostFuel;
 
+    public bool run = false;
+    public RectTransform loseScreen;
+
 	
 
 	void Start ()
@@ -47,12 +50,14 @@ public class PlayerController : MonoBehaviour
 
 	void Update ()
 	{
-		
+        fuelCounter.text = ("Boost: " + boostFuel);
 	}
 
 	void FixedUpdate ()
 	{
-		
+        if(!run)
+            return;
+        	
 		if (Input.GetAxis ("Vertical") == 1 && Input.GetAxis ("Break") != 1)
 		{
 			
@@ -170,7 +175,8 @@ public class PlayerController : MonoBehaviour
 				playerRigid.velocity = Vector3.zero;
 				speed = 0;
 				Debug.Log ("death");
-				Crash ();
+                loseScreen.gameObject.SetActive(true);
+                Crash ();
 
 			} else
 			{

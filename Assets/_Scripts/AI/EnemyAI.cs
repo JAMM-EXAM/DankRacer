@@ -8,6 +8,8 @@ public class EnemyAI : MonoBehaviour {
     public float speedTarget = 100f;
     public PathNode nextNode;
 
+    public bool run = false;
+
     private float verticalSens = 3f;
     private int nodeCounter = 0;
     private int randomSeed = 0;
@@ -42,7 +44,7 @@ public class EnemyAI : MonoBehaviour {
             speed = 0f;
         }
 
-        if(Application.isPlaying) {
+        if(Application.isPlaying && run) {
 
             //Honk randomly
             if(Random.Range(0, 1000) == 900 && !audioSource.isPlaying)
